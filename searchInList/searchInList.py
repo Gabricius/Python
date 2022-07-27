@@ -9,7 +9,7 @@ uNome = []
 full_data = []
 
 # Busca e definição do arquivo
-f = open("C:/Users/Public/PythonFundamentos-master/Cap04/Notebooks/arquivos/salarios.csv", 'r')
+f = open("C:/Users/Public/PythonF/arquivos/salarios.csv", 'r')
 data = f.read()
 rows = data.split('\n')
 
