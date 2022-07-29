@@ -3,14 +3,9 @@ import csv
 colunas = []
 maxColunas = 0
 
-with open("C:/Users/Public/PythonFundamentos-master/Cap04/Notebooks/arquivos/numeros.csv", 'r', encoding='utf8',
-          newline='\r\n') as arquivo:
-    # Lendo e listando os dados do arquivo
-    leitor = csv.reader(arquivo)
-    listArquivo = list(leitor)
-    # listArquivo = [['1'], ['1', '2', '3','4'], ['1', '2', '3','4'],['1','2','3','4','5']]
+listArquivo = [['1'], ['1', '2', '3','4'], ['1', '2', '3','4'],['1','2','3','4','5']]
 
-# Criando o máximo de colunas do arquivo
+# Criando o máximo de colunas da matriz
 for lista in listArquivo:
     for item in lista:
         if lista.index(item)+1 >= maxColunas:
