@@ -1,8 +1,8 @@
-import csv
 
 colunas = []
 maxColunas = 0
 
+# listArquivo = [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]]
 listArquivo = [['1'], ['1', '2', '3','4'], ['1', '2', '3','4'],['1','2','3','4','5']]
 
 # Criando o máximo de colunas da matriz
