@@ -1,3 +1,4 @@
+
 nomeCompleto = ''
 listTitulos = []
 listDepartamentos = []
@@ -19,30 +20,35 @@ for row in rows:
 
 for item in full_data:
     coluna = 0
+    
     # Consultar list in list
     for x in range(0, len(item)):
 
         # Separa os items por coluna
         if coluna == 0:
-            listPrimeiroNome.append(item[x])
+            listUltimoNome.append(item[x]) 
 
         if coluna == 1:
-            listTitulos.append(item[x])
+            listPrimeiroNome.append(item[x])               
 
         if coluna == 2:
             listDepartamentos.append(item[x])
 
         if coluna == 3:
-            listSalarios.append(item[x])
+            listTitulos.append(item[x])
 
         if coluna == 4:
-            listUltimoNome.append(item[x])
+            listSalarios.append(item[x])
 
         coluna += 1
 
 # Formação nome completo
 for idx in range(0, len(listUltimoNome)):
-    nomeCompleto = listPrimeiroNome[(idx + 1)][2:-1] + " " + listUltimoNome[idx][1:]
+    try:
+        nomeCompleto = listPrimeiroNome[(idx + 1)][2:-1] + " " + listUltimoNome[idx + 1][1:]
+    except:
+        None
+
     if nomeCompleto != '':
         listNomeCompleto.append(nomeCompleto)
 
@@ -50,16 +56,16 @@ for idx in range(0, len(listUltimoNome)):
 for counter in range(0, len(listNomeCompleto)):
     if listNomeCompleto[counter] != ' ':
         print("\nNome: " + listNomeCompleto[counter])
-        print("Salário: " + listSalarios[counter + 1])
+        print("Salário: " + listSalarios[counter])
         print("Título: " + listTitulos[counter + 1])
         print("Departamento: " + listDepartamentos[counter + 1] + "\n")
 
 # Faz a busca da linha especificada
 """
-indexItem = int(input("Qual o número do registro? "))  # -2  # Igual na lista
+indexItem = int(input("Qual o número do registro? ")) -2 # Igual na lista
 
 print("\nNome: " + listNomeCompleto[indexItem])
-print("Salário: " + listSalarios[indexItem + 1])
+print("Salário: " + listSalarios[indexItem])
 print("Título: " + listTitulos[indexItem + 1])
 print("Departamento: " + listDepartamentos[indexItem + 1] + "\n")
 """
